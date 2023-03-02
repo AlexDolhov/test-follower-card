@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Contsiner = styled.div`
+export const Container = styled.div`
     height: '100vh',
     display: 'flex',
     justifyContent: 'center',
