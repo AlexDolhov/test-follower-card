@@ -1,9 +1,10 @@
 import { Container } from 'components/App.styled';
+import { Users } from './Users/Users';
 
 export const App = () => {
   return (
     <Container>
-      <h1>Hello Follower</h1>
+      <Users />
     </Container>
   );
 };
