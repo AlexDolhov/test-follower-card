@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-follower-card/static/css/main.7acaea2f.css",
+    "main.js": "/test-follower-card/static/js/main.6cf402d2.js",
+    "index.html": "/test-follower-card/index.html",
+    "main.7acaea2f.css.map": "/test-follower-card/static/css/main.7acaea2f.css.map",
+    "main.6cf402d2.js.map": "/test-follower-card/static/js/main.6cf402d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.6cf402d2.js"
+  ]
+}
