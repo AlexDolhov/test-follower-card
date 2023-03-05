@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as LogoSvg } from 'img/logo.svg';
+import { ReactComponent as LogoSvg } from 'icons/logo.svg';
 import heroBackground from 'img/background.png';
 
 export const HeroThumb = styled.div`

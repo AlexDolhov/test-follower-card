@@ -4,27 +4,27 @@
     "user": "Hansel",
     "tweets": 777,
     "followers": 100500,
-    "avatar": "../src/img/hansel.png"
+    "avatar": "./img/hansel.png"
   },
   {
     "id": 2,
     "user": "Elon Reeve Musk",
     "tweets": 777777,
     "followers": 100500,
-    "avatar": "../src/img/elon-musk-avatar.jpg"
+    "avatar": "./img/elon-musk-avatar.jpg"
   },
   {
     "id": 3,
     "user": "Jessica Alba",
     "tweets": 888,
     "followers": 100500,
-    "avatar": "../src/img/jessica-alba-avatar.jpg"
+    "avatar": "./img/jessica-alba-avatar.jpg"
   },
   {
     "id": 4,
     "user": "Willard Carroll Smith II",
     "tweets": 1000000,
     "followers": 100500,
-    "avatar": "../src/img/will-smith-avatar.jpg"
+    "avatar": "./img/will-smith-avatar.jpg"
   }
 ]
