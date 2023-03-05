@@ -9,7 +9,7 @@ import {
   Followers,
 } from './UserCard.styled';
 
-import ava from 'img/hansel.png';
+// import ava from 'img/hansel.png';
 // import ava from 'img/elon-musk-avatar.jpg';
 import { useEffect, useState } from 'react';
 
