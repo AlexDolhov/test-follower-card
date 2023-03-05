@@ -10,8 +10,8 @@ import {
 } from './UserCard.styled';
 
 import ava from 'img/hansel.png';
-import { useEffect, useState } from 'react';
 // import ava from 'img/elon-musk-avatar.jpg';
+import { useEffect, useState } from 'react';
 
 export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
   const [following, setFollowing] = useState(false);
@@ -59,8 +59,8 @@ export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
       <UserInfo>
         <AvatarThumb>
           <UserAvatar
-            src={ava}
-            // src={avatar}
+            // src={ava}
+            src={avatar}
             alt={`${user} avatar`}
             width={64}
             height={64}
