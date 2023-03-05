@@ -9,8 +9,6 @@ import {
   Followers,
 } from './UserCard.styled';
 
-// import ava from 'img/hansel.png';
-// import ava from 'img/elon-musk-avatar.jpg';
 import { useEffect, useState } from 'react';
 
 export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
@@ -55,11 +53,9 @@ export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
       <HeroThumb>
         <Logo />
       </HeroThumb>
-      {/* <Devider /> */}
       <UserInfo>
         <AvatarThumb>
           <UserAvatar
-            // src={ava}
             src={avatar}
             alt={`${user} avatar`}
             width={64}
