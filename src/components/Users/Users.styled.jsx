@@ -9,10 +9,8 @@ export const UsersList = styled.ul`
 `;
 
 export const UserItem = styled.li`
+  position: relative;
   width: 380px;
-  height: 460px;
-
-  padding: 20px 20px 36px 20px;
 
   background: linear-gradient(
     114.99deg,

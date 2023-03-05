@@ -1,9 +1,78 @@
-import { ReactComponent as Logo } from '../../img/logo.svg';
+import {
+  HeroThumb,
+  Logo,
+  UserAvatar,
+  AvatarThumb,
+  UserInfo,
+  Button,
+  Tweets,
+  Followers,
+} from './UserCard.styled';
 
-export const UserCard = () => {
+import ava from 'img/hansel.png';
+import { useEffect, useState } from 'react';
+// import ava from 'img/elon-musk-avatar.jpg';
+
+export const UserCard = ({ user: { id, user, tweets, followers, avatar } }) => {
+  const [following, setFollowing] = useState(false);
+  const [followersCount, setfollowersCount] = useState(followers);
+
+  const [followedIds, setFollowedIds] = useState(() => {
+    const storedIds = localStorage.getItem('followedIds');
+    return storedIds ? JSON.parse(storedIds) : [];
+  });
+
+  const handleClick = id => {
+    setFollowing(!following);
+
+    if (following) {
+      setFollowedIds(state => state.filter(value => value !== id));
+      setfollowersCount(followers);
+      return;
+    }
+    setfollowersCount(state => state + 1);
+    setFollowedIds([...followedIds, id]);
+
+    // if (followedIds.includes(id)) {
+    //   setFollowing(false);
+    //   setFollowedIds(followedIds.filter(followedId => followedId !== id));
+    //   setfollowersCount(followers);
+    //   return;
+    // }
+    // setFollowing(true);
+    // setfollowersCount(state => state + 1);
+    // setFollowedIds([...followedIds, id]);
+  };
+
+  const formatedFollowesNumber = followersCount.toLocaleString('en-US');
+
+  useEffect(() => {
+    localStorage.setItem('followedIds', JSON.stringify(followedIds));
+  }, [followedIds]);
+
   return (
     <>
-      <Logo />
+      <HeroThumb>
+        <Logo />
+      </HeroThumb>
+      {/* <Devider /> */}
+      <UserInfo>
+        <AvatarThumb>
+          <UserAvatar
+            src={ava}
+            // src={avatar}
+            alt={`${user} avatar`}
+            width={64}
+            height={64}
+          />
+        </AvatarThumb>
+
+        <Tweets>{tweets} tweeets</Tweets>
+        <Followers>{formatedFollowesNumber} followers</Followers>
+        <Button onClick={() => handleClick(id)}>
+          {following ? 'Following' : 'Follow'}
+        </Button>
+      </UserInfo>
     </>
   );
 };
